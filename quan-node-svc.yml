@@ -1,0 +1,15 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: quan-node-service
+spec:
+  type: NodePort
+  ports:
+    - port: 8313
+      name: p2p
+      nodePort: 30000
+    - port: 8314
+      name: rpc
+      nodePort: 30001
+  selector:
+    name: quan-node

@@ -1,0 +1,13 @@
+kind: Pod
+apiVersion: v1
+metadata:
+  name: quan-node-pod
+  labels:
+    name: quan-node
+spec:
+  containers:
+    - name: quan-node-container
+      image: sounerd/quan-daemon:1.0
+      ports:
+        - containerPort: 8313
+        - containerPort: 8314
